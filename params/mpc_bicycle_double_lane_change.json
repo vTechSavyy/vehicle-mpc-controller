@@ -1,0 +1,36 @@
+{
+    "sim": {
+        "start_time": 0.0, 
+        "end_time": 25.0,
+        "sample_time": 0.05
+    }, 
+    "model" : {
+        "wheelbase": 3.5,
+        "steering_limit": 0.707,
+        "acc_limit": 6.0,
+        "steering_rate_limit": 0.5235,
+        "acc_rate_limit": 2.0, 
+        "process_noise_variances": [3e-03, 3e-03, 3e-06, 1e-03]
+    },
+
+    "mpc": {
+        "prediction_horizon": 3.0, 
+        "Q": {
+            "x": 2.0,
+            "y": 2.0,
+            "theta": 8.0,
+            "vel": 1.0
+        }, 
+        "R": {
+            "acc": 0.5,
+            "steering": 0.5
+        }, 
+        "init_state": {
+            "x": 0.1,
+            "y": -0.05,
+            "theta": -0.01,
+            "vel": 0.0
+        }
+    }
+
+}
